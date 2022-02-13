@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dojo Survey</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="medium">
+            <h1 class="title">Dojo Survey Result</h1>
+            <h3 class="sub-title">Submitted Information:</h3>
+            <table>
+                <tbody class="mb">
+                    <tr>
+                        <th class="left half">Name:</th>
+                        <td class="left">{{ session['full_name'] }}</td>
+                    </tr>
+                    <tr>
+                        <th class="left half">Dojo Location:</th>
+                        <td class="left">{{ session['location'] }}</td>
+                    </tr>
+                    <tr>
+                        <th class="left half">Favorite Language:</th>
+                        <td class="left">{{ session['language'] }}</td>
+                    </tr>
+                    <tr>
+                        <th class="left half">Comments:</th>
+                        <td class="left">{{ session['comment'] }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn mt" onclick="refresh()">Back</button>
+        </div>
+    </div>
+
+    <script>
+        function refresh() {
+            self.location = '/clear';
+        }
+    </script>
+</body>
+</html>

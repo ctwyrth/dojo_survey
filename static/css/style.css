@@ -1,0 +1,108 @@
+/* Simple reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Principal page element */
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    background-color: ghostwhite;
+}
+
+table {
+    font-size: .85rem;
+    width: 100%
+}
+
+/* th {
+    margin-right: .5rem;
+} */
+
+.medium {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* text-align: left; */
+    justify-content: flex-start;
+    width: 40%;
+    height: fit-content;
+    background-color: maroon;
+    color: blanchedalmond;
+    border: 0;
+    border-radius: 8px;
+    margin: 2% auto 0;
+    padding: 2.5% 4% 4%;
+}
+
+.title {
+    color: darkgoldenrod;
+    font-weight: 500;
+    margin-bottom: 7.5%;
+}
+
+.sub-title {
+    margin-bottom: 3.5%;
+}
+
+.mt {
+    margin-top: 5%;
+}
+
+.dojo {
+    width: 100%;
+    /* padding: 5px; */
+}
+
+.survey {
+    display: block;
+    color: blanchedalmond;
+    margin: 0 0 1.5%;
+}
+
+.name-input, .loc-input, .lang-input {
+    width: 100%;
+    font-size: .85rem;
+    height: 40px;
+    margin-bottom: 5%;
+    padding: 2%;
+    border-radius: 4px;
+}
+
+textarea {
+    font-size: .85rem;
+    padding: 2%;
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 5%;
+}
+
+.btn {
+    width: 100%;
+    height: 40px;
+    background-color: darkgoldenrod;
+    color: maroon;
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: 2%;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0 0 2px ghostwhite;
+}
+
+.btn:hover {
+    box-shadow: 0 0 8px black;
+}
+
+.left {
+    text-align: left;
+}
+
+.half {
+    width: 48%;
+}
