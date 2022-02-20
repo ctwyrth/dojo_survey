@@ -19,19 +19,19 @@
                 <tbody class="mb">
                     <tr>
                         <th class="left half">Name:</th>
-                        <td class="left">{{ session['full_name'] }}</td>
+                        <td class="left">{{ survey.fname }} {{ survey.lname }}</td>
                     </tr>
                     <tr>
                         <th class="left half">Dojo Location:</th>
-                        <td class="left">{{ session['location'] }}</td>
+                        <td class="left">{{ survey.location }}</td>
                     </tr>
                     <tr>
                         <th class="left half">Favorite Language:</th>
-                        <td class="left">{{ session['language'] }}</td>
+                        <td class="left">{{ survey.language }}</td>
                     </tr>
                     <tr>
                         <th class="left half">Comments:</th>
-                        <td class="left">{{ session['comment'] }}</td>
+                        <td class="left">{{ survey.comment }}</td>
                     </tr>
                 </tbody>
             </table>

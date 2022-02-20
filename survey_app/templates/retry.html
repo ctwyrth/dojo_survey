@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dojo Survey</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="medium">
+            <h1 class="title">Dojo Survey</h1>
+            <form action="/results" method="POST" class="dojo">
+                {% with messages = get_flashed_messages() %}
+                    {% if messages: %}
+                        {% for message in messages: %}
+                            <p>{{ message }}</p>
+                        {% endfor %}
+                        <label for="fname" class="survey">First Name:</label>
+                        <input type="text" name="fname" id="fname" value="{{ data.fname }}" class="name-input">
+                        
+                        <label for="lname" class="survey">Last Name:</label>
+                        <input type="text" name="lname" id="lname" value="{{ data.lname }}" class="name-input">
+                        
+                        <label for="location" class="survey">Dojo Location:</label>
+                        <select name="location" id="location" class="loc-input" value="{{ data.location }}">
+                            <option value="select">--- select a location ---</option>
+                            <option value="Boise">Boise</option>
+                            <option value="Bellevue">Bellevue</option>
+                            <option value="Chicago">Chicago</option>
+                            <option value="Los Angeles">Los Angeles</option>
+                            <option value="Silicon Valley">Silicon Valley</option>
+                            <option value="Online">Online</option>
+                        </select>
+                        
+                        <label for="fav_language" class="survey">Favorite Language:</label>
+                        <select name="language" id="language" class="lang-input" value="{{ data.language }}">
+                            <option value="select">--- select a location ---</option>
+                            <option value="Python">Python</option>
+                            <option value="Javascript">Javascript</option>
+                            <option value="Java">Java</option>
+                            <option value="C#">C#</option>
+                            <option value="HTML">HTML</option>
+                            <option value="CSS">CSS</option>
+                        </select>
+                        
+                        <label for="comment" class="survey">Comments:</label>
+                        <textarea name="comment" id="comment" cols="30" rows="10">{{ data.comment }}</textarea>
+                        
+                        <input type="submit" class="btn" value="Submit">
+                    </form>
+                    {% endif %}
+                {% endwith %}
+        </div>
+    </div>
+</body>
+</html>
